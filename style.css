@@ -481,39 +481,187 @@ section {
     color: #bdbdbd;
     line-height: 1.6;
 
+}
+
+/* Skills Css---------------------------- */
+
+.skills {
+    background: var(--secon-bg-color);
+}
+
+.skill-main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
+}
+
+.skill-bar {
+
+    margin-top: 2.3rem;
+}
+
+.skill-main h3 {
+    margin-bottom: 2rem;
+    font-size: var(--normal-font);
+    text-align: center;
+}
+
+.skill-left .skill-bar .info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.skill-left .skill-bar .bar {
+    width: 100%;
+    height: 10px;
+    background: var(--bg-color);
+    border-radius: 25px;
+    margin-top: 10px;
+    position: relative;
+
+}
+.skill-bar .bar span{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background: var(--hover-color);
+    border-radius: 30px;
+    box-shadow: var(--neon-box-shadow);
+
+}
+.skill-bar .bar .html{
+    width: 72%;
+    animation: html 2s;
+}
+.skill-bar .bar .react-native{
+    width: 72%;
+    animation: react-native 3s;
+
+}
+
+.skill-bar .bar .javascript{
+    width: 65%;
+    animation: javascript 4s;
+
+}
+
+.skill-bar .bar .flutter{
+    width: 45%;
+    animation: flutter 5s;
+
+}
+
+.skill-bar .bar .aws{
+    width: 75%;
+    animation: aws 6s;
+
+}
+.skill-bar .bar .css{
+    width: 63%;
+    animation: css 7s;
+
+}
 
 
 
-    /* keyframes---------------------------- */
-    @keyframes morph {
 
-        0%,
-        100% {
-            border-radius: 40% 60% 70% 30% /40% 40% 60% 50%;
-        }
 
-        30% {
-            border-radius: 70% 30% 50% 50% /30% 30% 70% 70%;
-        }
 
-        60% {
-            border-radius: 100% 60% 60% 100% /100% 100% 60% 60%;
-        }
 
-        80% {
-            border-radius: 69% 31% 66% 34% /21% 30% 70% 79%;
-        }
+
+
+/* keyframes---------------------------- */
+@keyframes morph {
+
+    0%,
+    100% {
+        border-radius: 40% 60% 70% 30% /40% 40% 60% 50%;
     }
 
-
-
-
-    @media (max-width: 768px) {
-        .navlist {
-            display: none;
-        }
-
-        #menu-icon {
-            display: block;
-        }
+    30% {
+        border-radius: 70% 30% 50% 50% /30% 30% 70% 70%;
     }
+
+    60% {
+        border-radius: 100% 60% 60% 100% /100% 100% 60% 60%;
+    }
+
+    80% {
+        border-radius: 69% 31% 66% 34% /21% 30% 70% 79%;
+    }
+}
+
+@keyframes html {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 72%;
+    }
+}
+
+
+@keyframes react-native {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
+    }
+}
+
+@keyframes javascript {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 65%;
+    }
+}
+
+
+@keyframes flutter {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 45%;
+    }
+}
+
+
+@keyframes aws {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 75%;
+    }
+}
+
+
+@keyframes css {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 63%;
+    }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .navlist {
+        display: none;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+}
