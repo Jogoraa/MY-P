@@ -19,7 +19,6 @@
     --neon-box-shadow: 0 0.5rem #12f7ff;
     --info-color: #fdfdfd;
     font-size: 16px;
-
     --h2-font: 3rem;
     --font-neon-text-shadow:
         0 0 10px rgba(18, 247, 255, 0.3),
@@ -58,11 +57,23 @@ body {
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: var(--bg-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 20px;
+    padding: 20px 10%;
+}
+
+.sticky {
+    background: var(--bg-color);
+    border-bottom: 1px solid var(--secon-bg-color);
+    padding: 12px 10%;
+    transition: all 0.3s ease-in-out;
 }
 
 .logo {
@@ -89,6 +100,11 @@ span {
 .navlist a:hover {
     color: var(--hover-color);
     text-shadow: var(--font-neon-text-shadow);
+}
+
+.navlist a.active {
+    color: var(--hover-color);
+
 }
 
 #menu-icon {
@@ -597,7 +613,16 @@ section {
     width: 63%;
     animation: css 7s;
 
+
 }
+
+.skill-bar .bar .data-analysis {
+    width: 63%;
+    animation: css 7s;
+
+
+}
+
 
 
 
@@ -787,6 +812,41 @@ section {
     /* Add spacing between paragraph and icon */
 }
 
+/* Education Section CSS -------------------------------------------*/
+#education {
+    padding: 50px 0;
+    background:var(--bg-color)
+}
+
+
+
+/* Education details section */
+.education-details {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+    background:var(--hover-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.education-details h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.education-details p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.education-details p:first-of-type {
+    font-weight: bold;
+    color: #4CAF50;
+}
 
 /* Contact me section- css--------------------------- */
 
@@ -891,6 +951,15 @@ footer a i {
     }
 }
 
+@keyframes data-analysis {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
 
 @keyframes react-native {
     0% {
@@ -957,4 +1026,33 @@ footer a i {
     }
 }
 
-/* Responsive Adjustments */
+/* Break Points */
+
+@media screen and (max-width: 991px) {
+
+    header,
+    .sticky {
+        padding: 15px, 5%;
+    }
+
+    footer {
+        padding: 15px 5%;
+    }
+
+    section {
+        padding: 50px 5%;
+    }
+
+    .navlist a {
+        padding: 8px 15px;
+    }
+
+    :root {
+
+        --big-font: 2.2rem;
+        --normal-font: 1.8rem;
+        --neon-box-shadow: 0 0.8rem #12f7ff;
+        font-size: 16px;
+        --h2-font: 3rem;
+    }
+}
