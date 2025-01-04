@@ -71,3 +71,10 @@ circles.forEach(elem => {
     pointsMarked[i].classList.add('marked');
   }
 });
+
+
+
+
+//mix it up portifolio section
+const containerEl = document.querySelector('.portfolio-gallery');
+mixitup(containerEl);
