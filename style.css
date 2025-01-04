@@ -32,6 +32,22 @@
         0 0 150px rgba(18, 247, 255, 0.3);
 }
 
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+    height: 0;
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secon-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--hover-color);
+    border-radius: 5px;
+}
+
+
 body {
     font-family: "Poppins", sans-serif;
     background-color: var(--bg-color);
@@ -40,14 +56,6 @@ body {
     height: 100%;
     line-height: 1.6;
 }
-
-/* Focus States for Accessibility */
-.navlist a:focus,
-.btn:focus {
-    outline: 2px dashed var(--hover-color);
-    outline-offset: 3px;
-}
-
 
 header {
     display: flex;
@@ -815,23 +823,26 @@ section {
     width: 100%;
 }
 
-.formBtn .btn{
- 
+.formBtn .btn {
+
     cursor: pointer;
     font-size: 1rem;
-    
+
 }
+
 /* Footer Css */
-footer{
+footer {
     padding: 1.5rem 10%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-footer p{
+
+footer p {
     color: #bdbdbd;
 }
-footer a{
+
+footer a {
     display: inline-flex;
     justify-content: center;
     color: var(--text-color);
@@ -840,6 +851,14 @@ footer a{
     border-radius: 5px;
 
 }
+
+footer a i {
+    font-size: 1rem;
+    color: var(--secon-bg-color);
+}
+
+
+
 
 /* keyframes---------------------------- */
 @keyframes morph {
@@ -939,4 +958,3 @@ footer a{
 }
 
 /* Responsive Adjustments */
-

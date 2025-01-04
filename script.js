@@ -78,3 +78,14 @@ circles.forEach(elem => {
 //mix it up portifolio section
 const containerEl = document.querySelector('.portfolio-gallery');
 mixitup(containerEl);
+
+// active menu
+const menuEl = document.querySelectorAll('header ul li a');
+let section = document.querySelectorAll('section')
+function activeMenu() {
+  let len=section.length
+
+  while(--len &&  window.scrollY +97<section[len].offsetTop){} 
+  menuEl.forEach(sec=>sec.classList.remove('active'));
+  menuEl[len].classList.add('active');
+}
