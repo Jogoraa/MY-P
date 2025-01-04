@@ -401,13 +401,17 @@ section {
 }
 
 .info-about2 {
-    top: 40%;
-    right: 52%;
+    top: 30%;
+    right: 55%;
+    z-index: 1;
+
 }
 
 .info-about3 {
-    bottom: 20%;
+    bottom: 25%;
     left: 15%;
+    z-index: 1;
+
 }
 
 .img-about span {
@@ -815,7 +819,7 @@ section {
 /* Education Section CSS -------------------------------------------*/
 #education {
     padding: 50px 0;
-    background:var(--bg-color)
+    background: var(--bg-color)
 }
 
 
@@ -825,7 +829,7 @@ section {
     margin: 0 auto;
     max-width: 800px;
     padding: 20px;
-    background:var(--hover-color);
+    background: var(--secon-bg-color);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -833,19 +837,19 @@ section {
 .education-details h3 {
     font-size: 28px;
     font-weight: 600;
-    color: #333;
+    color: var(--text-color);
     margin-bottom: 10px;
 }
 
 .education-details p {
     font-size: 16px;
-    color: #555;
+    color: var(--text-color);
     line-height: 1.6;
 }
 
 .education-details p:first-of-type {
     font-weight: bold;
-    color: #4CAF50;
+    color: var(--info-color);
 }
 
 /* Contact me section- css--------------------------- */
@@ -1028,7 +1032,7 @@ footer a i {
 
 /* Break Points */
 
-@media screen and (max-width: 991px) {
+@media (max-width: 991px) {
 
     header,
     .sticky {
@@ -1054,5 +1058,106 @@ footer a i {
         --neon-box-shadow: 0 0.8rem #12f7ff;
         font-size: 16px;
         --h2-font: 3rem;
+    }
+
+    .home-content {
+        margin-top: 5rem;
+    }
+
+    .social-icons {
+        margin-top: 2rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+        transition: all .4s ease;
+
+    }
+
+    .bx-x {
+        transform: rotate(-180deg);
+    }
+
+    .navlist {
+        display: flex;
+        position: absolute;
+        top: -1000px;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        background: var(--bg-color);
+        text-align: left;
+        padding: 0 5%;
+        transition: all 0.4s ease;
+    }
+
+    .navlist a {
+        display: block;
+        padding-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+    .navlist.open {
+        top: 0;
+    }
+
+    .home {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .home-image {
+        margin-bottom: 5rem;
+    }
+
+    .liquid-shape {
+        width: 80%;
+        left: 10%;
+        top: 13%;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .skill-main {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-buttons {
+        margin: 2.5rem 0;
+    }
+
+    footer p {
+        font-size: .9rem;
+
+    }
+
+
+}
+
+@media (max-width: 420px) {
+    html {
+        font-size: 80%;
+    }
+
+    footer p {
+        font-size: .6rem;
+
+    }
+
+    .filter-buttons .btn {
+        font-size: 0.8rem;
+
+    }
+
+    .img-about img {
+        width: 300px;
+
+
     }
 }
