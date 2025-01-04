@@ -93,8 +93,11 @@ span {
 .navlist a {
     color: var(--text-color);
     font-weight: 500;
+    display: inline-block;
     padding: 10px 20px;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+    animation: slideAnimation 1s ease forwards;
+    animation-delay: calc(0.3s * var(--i));
+    opacity: 0;
 }
 
 .navlist a:hover {
@@ -342,7 +345,9 @@ section {
 }
 
 .about .img-about {
+    position: relative;
     max-width: 400p;
+    text-align: center;
     height: auto;
 }
 
@@ -700,7 +705,7 @@ section {
     text-align: center;
 }
 
-.filter-buttons .btn {
+.filter-buttons .button {
     background: none;
     border: none;
     outline: none;
@@ -713,7 +718,7 @@ section {
     transition: color 0.3s ease-in-out;
 }
 
-.filter-buttons .btn:hover {
+.filter-buttons .button:hover {
     color: var(--hover-color);
 }
 
@@ -921,8 +926,35 @@ footer a i {
     color: var(--secon-bg-color);
 }
 
+/* parallax---------------------------- */
+
+.scroll-scale {
+    opacity: 0;
+    transform: scale(.9);
+    transition: all 2s;
+}
 
 
+
+.scroll-bottom {
+
+    opacity: 0;
+    transform: translateY(300px);
+    transition: 3s;
+}
+
+.scroll-top {
+
+    opacity: 0;
+    transform: translateY(-300px);
+    transition: 3s;
+}
+
+.show-items {
+    opacity: 1;
+    transform: translateX(0);
+
+}
 
 /* keyframes---------------------------- */
 @keyframes morph {
@@ -1030,7 +1062,18 @@ footer a i {
     }
 }
 
-/* Break Points */
+@keyframes slideAnimation {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 
 @media (max-width: 991px) {
 
@@ -1120,8 +1163,13 @@ footer a i {
         top: 13%;
     }
 
+    .liquid-shape:nth-child(2) {
+
+        filter: blur(50px);
+    }
+
     .about {
-        flex-direction: column-reverse;
+        display: flex;
     }
 
     .skill-main {
@@ -1150,7 +1198,7 @@ footer a i {
 
     }
 
-    .filter-buttons .btn {
+    .filter-buttons .filter-button {
         font-size: 0.8rem;
 
     }
@@ -1159,5 +1207,16 @@ footer a i {
         width: 300px;
 
 
+    }
+
+    .info-about1,
+    .info-about2,
+    .info-about3 {
+        display: none;
+
+    }
+
+    .img-about p {
+        font-size: 1rem;
     }
 }

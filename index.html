@@ -19,19 +19,20 @@
   <header>
     <div class="logo"><span>D</span>awit.</div>
     <ul class="navlist">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#portifolio">Portifolio</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#education">Education</a></li>
+      <li><a href="#home" style="--i: 1;">Home</a></li>
+      <li><a href="#about" style="--i: 2;">About</a></li>
+      <li><a href="#skills" style="--i: 3;">Skills</a></li>
+      <li><a href="#portfolio" style="--i: 4;">Portfolio</a></li>
+      <li><a href="#contact" style="--i: 5;">Contact</a></li>
+      <li><a href="#education" style="--i: 6;">Education</a></li>
     </ul>
     <div id="menu-icon" class="bx bx-menu"></div>
   </header>
 
+
   <!-- Home Section -->
   <section class="home" id="home">
-    <div class="home-content">
+    <div class="home-content scroll-scale">
       <h1>Hi! I'm Dawit Jogora</h1>
       <div class="change-text">
         <h3>And I'm</h3>
@@ -67,7 +68,7 @@
         <a href="#"><i class="bx bxl-telegram"></i></a>
       </div>
     </div>
-    <div class="home-image">
+    <div class="home-image scroll-scale">
       <div class="img-box">
         <img src="img/about-us.png" alt="Dawit Jogora">
       </div>
@@ -102,42 +103,47 @@
 
     </div>
   </section>
-  <!-- about Section -->
+  <!-- About Section -->
   <section id="about" class="about">
-    <div class="img-about">
-      <img src="img/about-me-pic2.png" alt="about me">
-      <div class="info-about1">
-        <span>4+</span>
-        <p>Years of Experiance</p>
+    <div class="about-container">
+      <!-- Image Section -->
+      <div class="img-about scroll-scale">
+        <img src="img/about-me-pic2.png" alt="About me">
+        <div class="info-about1">
+          <span>4+</span>
+          <p>Years of Experience</p>
+        </div>
+        <div class="info-about2">
+          <span>3</span>
+          <p>Projects Completed</p>
+        </div>
+        <div class="info-about3">
+          <span>5+</span>
+          <p>Certifications Achieved</p>
+        </div>
       </div>
-      <div class="info-about2">
-        <span>3</span>
-        <p>Projects Complete</p>
-      </div>
-      <div class="info-about3">
-        <span>5+</span>
-        <p>Projects Complete</p>
-      </div>
-      <div class="about-content">
-        <span> Let me Introduce My Self</span>
-        <h2> About Me</h2>
-        <h3> A Story of Growth and Development</h3>
+
+      <!-- Text Section -->
+      <div class="about-content scroll-scale">
+        <span>Let me Introduce Myself</span>
+        <h2>About Me</h2>
+        <h3>A Story of Growth and Development</h3>
         <p>
-          I have a B.Sc. in Information Systems from Haramaya University, with a CGPA of 3.56/4. I have hands-on
-          experience with ERP systems, security configurations, system administration, and software development.
-          Currently, I am working as an IT Support & System Administrator at Qingdao Hisense Technology.
+          I have a B.Sc. in Information Systems from Haramaya University, with a CGPA of 3.56/4.
+          I have hands-on experience with ERP systems, security configurations, system administration,
+          and software development. Currently, I am working as an IT Support & System Administrator
+          at Qingdao Hisense Technology.
         </p>
-
+        <div class="btn-box">
+          <a href="#" class="btn">Read More</a>
+        </div>
       </div>
-      <div class="btn-box">
-        <a href="#" class="btn"> Read More</a>
-      </div>
-
     </div>
   </section>
+
   <!-- Services Section -->
-  <section id="services" class="services">
-    <div class="main-text">
+  <section id="services" class="services scroll-bottom">
+    <div class="main-text scroll-scale ">
       <span>What I will do for you</span>
       <h2>Our Services</h2>
       <div class="section-services">
@@ -214,16 +220,16 @@
   <!-- Skills Section -->
   <section id="skills" class="skills">
 
-    <div class="main-text">
+    <div class="main-text scroll-scale">
       <span>
         Technical and Professional
       </span>
       <h2>My Skills</h2>
     </div>
 
-    <div class="skill-main">
+    <div class="skill-main scroll-scale">
 
-      <div class="skill-left">
+      <div class="skill-left scroll-scale">
         <h3>Technical Skills</h3>
         <div class="skill-bar">
           <div class="info">
@@ -293,7 +299,7 @@
         </div>
 
       </div>
-      <div class="skill-right">
+      <div class="skill-right scroll-scale">
         <h3>Professional Skills</h3>
         <div class="professional">
 
@@ -340,21 +346,21 @@
     </div>
   </section>
   <!-- Portifolio Section -->
-  <section id="portifolio" class="portifolio">
-    <div class="main-text">
+  <section id="portfolio" class="portifolio">
+    <div class="main-text scroll-scale">
       <div class="main-text">
-        <span>What I will do for you</span>
-        <h2>Latest Projects I've Worked on</h2>
+        <span>What I've done so far</span>
+        <h2>Latest Projects </h2>
       </div>
     </div>
     <div class="container">
-      <div class="filter-buttons">
-        <button class="btn" data-filter=".all">All</button>
-        <button class="btn" data-filter=".product">Product</button>
-        <button class="btn" data-filter=".mobile">Mobile App</button>
-        <button class="btn" data-filter=".web">Web App</button>
+      <div class="filter-buttons scroll-scale">
+        <button class="button" data-filter=".all">All</button>
+        <button class="button" data-filter=".product">Product</button>
+        <button class="button" data-filter=".mobile">Mobile App</button>
+        <button class="button" data-filter=".web">Web App</button>
       </div>
-      <div class="portfolio-gallery">
+      <div class="portfolio-gallery scroll-bottom">
 
         <!-- Project 1: Chat App -->
         <div class="port-box mix mobile">
@@ -495,13 +501,13 @@
 
 
   <section id="contact" class="contact">
-    <div class="main-text">
+    <div class="main-text scroll-scale">
       <div class="main-text">
         <span>
           Ask me a question</span>
         <h2>Contact Me </h2>
       </div>
-      <form action="#">
+      <form action="#" class="scroll-bottom">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <input type="tel" name="phone" placeholder="Your Phone" required>
@@ -515,12 +521,12 @@
   <!-- Education Section -->
 
   <section id="education" class="education">
-    <div class="main-text">
+    <div class="main-text scroll-scale">
       <span>My Education</span>
       <h2>Education</h2>
     </div>
 
-    <div class="education-details">
+    <div class="education-details scroll-bottom">
       <h3>B.Sc. in Information Systems</h3>
       <p>Haramaya University, Harar, Ethiopia</p>
       <p>10/2019 - 02/2024 | CGPA: 3.56/4 | Exit Exam: 78/100</p>
@@ -528,7 +534,7 @@
   </section>
   <!-- Footer Section -->
   <footer id="footer">
-    <p>Copyright &copy; 2025 All rights reserved | Designed by <a href="#">Dawit Jogora</a></p>
+    <p class="scroll-scale">Copyright &copy; 2025 All rights reserved | Designed by Dawit Jogora</p>
     <a href="#home" class="back-to-top"><i class='bx bx-up-arrow-alt'></i></a>
   </footer>
 
