@@ -138,8 +138,26 @@ scrollTop.forEach((el) => observer.observe(el));
 
 
 
+// Email js
 
 
 
+// Initialize EmailJS
+emailjs.init('EAEAHWDf60oL7AlTh'); // Replace with your actual EmailJS public key
 
+// Handle form submission
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Send form data using EmailJS
+  emailjs.sendForm('service_nrmippa', 'template_r3euf3e', this)
+    .then(function (response) {
+      console.log('SUCCESS!', response.status, response.text);
+      alert('Your message has been sent successfully!');
+      document.getElementById('contact-form').reset(); // Reset the form
+    }, function (error) {
+      console.error('FAILED...', error);
+      alert('Oops! Something went wrong. Please try again.');
+    });
+});
 
