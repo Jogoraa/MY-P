@@ -161,3 +161,41 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
     });
 });
 
+
+  // Add functionality for "Download CV"
+  document.querySelector(".btn-box .btn:first-child").addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent default link behavior
+    // Trigger file download
+    const link = document.createElement("a");
+    link.href = "resume/Dawit_Jogora_CV.pdf"; // Replace with the actual CV file path
+    link.download = "Dawit_Jogora_CV.pdf"; // Set the downloaded file name
+    link.click();
+  });
+
+  // Add functionality for "Hire Me"
+  document.querySelector(".btn-box .btn:last-child").addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent default link behavior
+    // Redirect to contact or hire page
+    window.location.href = "#contact"; // Replace with the actual contact page URL
+  });
+
+
+
+  // Read more about
+document.querySelector(".read-more-btn").addEventListener("click", function (event) {
+  event.preventDefault(); // Prevents default link behavior
+
+  const moreText = document.querySelector(".more-text");
+  const dots = document.querySelector(".dots");
+  const btn = event.target;
+
+  if (moreText.style.display === "none" || moreText.style.display === "") {
+    moreText.style.display = "inline"; // Show additional text
+    dots.style.display = "none"; // Hide dots
+    btn.textContent = "Read Less"; // Change button text
+  } else {
+    moreText.style.display = "none"; // Hide additional text
+    dots.style.display = "inline"; // Show dots
+    btn.textContent = "Read More"; // Reset button text
+  }
+});

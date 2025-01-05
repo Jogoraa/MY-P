@@ -82,6 +82,7 @@ header {
     letter-spacing: 1px;
 }
 
+
 span {
     color: var(--hover-color);
 }
@@ -257,6 +258,57 @@ section {
     width: 100%;
 }
 
+
+
+
+/* Read more------------ */
+
+/* About Section Text */
+.short-text {
+    display: inline;
+    /* Always visible */
+}
+
+.more-text {
+    display: none;
+    /* Initially hidden */
+    color: #fdfdfd;
+    /* Matches the style of other text */
+    margin-top: 1em;
+    font-weight: 300;
+}
+
+/* Read More Button */
+/* About Section Text */
+.short-text {
+    display: inline;
+    /* Always visible */
+}
+
+.more-text {
+    display: none;
+    /* Initially hidden */
+    color: #fdfdfd;
+    /* Matches the style of other text */
+    margin-top: 1em;
+    font-weight: 300;
+}
+
+/* Read More Button */
+.read-more-btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--hover-color);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: var(--bg-color);
+}
+
+
 .social-icons {
     margin-top: 2rem;
     display: flex;
@@ -334,7 +386,8 @@ section {
     top: 10;
     left: 0;
 }
-.liquid-shape:nth-child(2){
+
+.liquid-shape:nth-child(2) {
 
     filter: blur(50px);
 }
@@ -346,13 +399,6 @@ section {
     align-items: center;
     grid-gap: 2em;
     background: var(--secon-bg-color);
-}
-
-.about .img-about {
-    position: relative;
-    max-width: 400p;
-    text-align: center;
-    height: auto;
 }
 
 .about-content span {
@@ -400,26 +446,24 @@ section {
     box-shadow: var(--neon-box-shadow);
     border: 1px solid var(--hover-color);
     z-index: 100;
+    outline: 2px solid var(--bg-color);
     animation: morph 6s linear infinite;
 }
 
 .info-about1 {
-    top: 15%;
-    left: 10%;
-    z-index: 1;
+    top: 10%;
+    left: 50%;
 }
 
 .info-about2 {
-    top: 30%;
-    right: 55%;
-    z-index: 1;
+    top: 66%;
+    left: 60%;
 
 }
 
 .info-about3 {
-    bottom: 25%;
-    left: 15%;
-    z-index: 1;
+    top: 70%;
+    left: 70%;
 
 }
 
@@ -1078,6 +1122,7 @@ footer a i {
     }
 }
 
+/* Responsiveness  */
 
 @media (max-width: 991px) {
 
