@@ -331,8 +331,12 @@ section {
     width: 100%;
     height: 100%;
     z-index: -1;
-    top: 0;
+    top: 10;
     left: 0;
+}
+.liquid-shape:nth-child(2){
+
+    filter: blur(50px);
 }
 
 /* About Section CSS -------------------------------------------------*/
